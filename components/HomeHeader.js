@@ -2,7 +2,7 @@ import { View, Text, Image, TextInput } from "react-native";
 
 import { COLORS, FONTS, SIZES, assets } from "../constants";
 
-const HomeHeader = ({}) => {
+const HomeHeader = ({ onSearch }) => {
   return (
     <View
       style={{
@@ -25,12 +25,12 @@ const HomeHeader = ({}) => {
         <View style={{ width: 45, height: 45 }}>
           <Image
             source={assets.person01}
-            resizeMethod="contain"
+            resizeMode="contain"
             style={{ width: "100%", height: "100%" }}
           />
           <Image
             source={assets.badge}
-            resizeMethod="contain"
+            resizeMode="contain"
             style={{
               position: "absolute",
               width: 15,
@@ -83,7 +83,7 @@ const HomeHeader = ({}) => {
           <TextInput
             placeholder="Search NFTS"
             style={{ flex: 1 }}
-            onChangeText={() => {}}
+            onChangeText={ onSearch }
           />
         </View>
       </View>
